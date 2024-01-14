@@ -26,8 +26,14 @@ function resetTimer() {
     document.getElementById('timerDisplay').innerText = '25:00';
 }
 
+function setTitle() {
+    const title = document.getElementById('titleInput').value;
+    document.title = title;
+}
+
 document.getElementById('startButton').addEventListener('click', startTimer);
 document.getElementById('pauseButton').addEventListener('click', pauseTimer);
 document.getElementById('resetButton').addEventListener('click', resetTimer);
+document.getElementById('setTitleButton').addEventListener('click', setTitle);
 
 resetTimer();
